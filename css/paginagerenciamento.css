@@ -1,0 +1,89 @@
+body{
+    font-family: sans-serif;
+}
+header{
+    background-image: linear-gradient(to bottom, #3bee27,#06b500,#11660e);
+    height: 100px;
+    width: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+
+footer{
+    background-image: linear-gradient(to bottom,#3bee27,#06b500,#11660e);
+    height: 100px;
+    width: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+ a:visited{
+    color: white;
+}
+
+/*css do teste*/
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cardapio{
+    display: flex;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, #ebebeb,#c9c9c9,#707070);
+    height: 20px;
+    width: auto;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.alergico{
+    display: flex;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, #ebebeb,#c9c9c9,#707070);
+    height: 20px;
+    width: auto;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.alimento{
+    display: flex;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, #ebebeb,#c9c9c9,#707070);
+    height: 20px;
+    width: auto;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.button{
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, #3bee27,#06b500,#11660e);
+    height: auto;
+    width: 100px;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}

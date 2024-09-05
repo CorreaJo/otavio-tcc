@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="CardapioAlimento.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                </svg>
+            </a>
+            <div class="logo">
+                <img src="image/logo.jpeg" alt="Instituto Federal São Paulo">
+            </div>
+            <div class="actions">
+                <button class="notification">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 2.083-1.2 2.855V10a1 1 0 1 0 2 0V7.145c.7 0 1.2-.755 1.2-1.855 0-1.098-.5-2.083-1.2-2.855z"/>
+                        <path d="M14 1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12zm-1 1a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+                    </svg>
+                </button>
+                <button class="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.87 9.768 10 9.002c-.87-.766-1.688-.84-2.504-.154C5.436 8.14 4.627 8.007 3.828 7.593c-.8-.413-1.53-.826-2.314-1.258C.513 5.536.31 4.616.246 3.742.182 2.867.278 2 1.035 2h13.926c.757 0 1.343.868.853 1.525C15.282 3.87 15.218 4.613 14.965 5.505c-.258.885-.868 1.525-1.646 1.771-.777.247-1.591.112-2.314-.154C11.372 7.158 10.66 6.26 10 5.496c-.66-.765-1.379-.84-2.504-.154C5.436 4.86 4.627 4.71 3.828 4.3C.513 2.853.31 2 1.035 2h13.926c.757 0 1.343.868.853 1.525C15.282 3.87 15.218 4.613 14.965 5.505c-.258.885-.868 1.525-1.646 1.771-.777.247-1.591.112-2.314-.154C11.372 7.158 10.66 6.26 10 5.496c-.66-.765-1.379-.84-2.504-.154C5.436 4.86 4.627 4.71 3.828 4.3C.513 2.853.31 2 1.035 2h13.926z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cardapio">
+                <h1>Cardápio</h1>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome do prato">
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" placeholder="Descrição do prato"></textarea>
+                    </div>
+                </form>
+                <button type="button" class="proximo">Próximo</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Gerenciamento</p>
+        </div>
+    </footer>
+</body>
+</html>

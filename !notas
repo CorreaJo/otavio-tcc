@@ -1,0 +1,39 @@
+
+-LOGIN (X)
+    formulario login
+        novo cadastro
+
+-HOME
+    cabeçalho
+        menu
+        logo
+        conta
+    body
+        cardapio
+        tabela nutricional
+        alergicos
+        calendario
+    rodapé
+
+-CONTA (X)
+    bio
+    restriçoes
+
+-GERENCIAMENTO
+    verificaçao
+    CRUD cardapio
+    CRUD alimentos
+    CRUD alergicos
+
+-BANCO DE DADOS (X)
+    usuario
+        nome
+        email
+        senha
+        bio
+        restriçoes
+    cardapio
+
+    alimentos
+
+    alergicos
