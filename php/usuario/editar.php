@@ -9,7 +9,7 @@ $senha= $_POST['senha'];
 $biografia= $_POST['biografia'];
 $restricoes= $_POST['restricoes'];
 
-$sql= "UPDATE Usuario SET nome = $nome, biografia = $biografia WHERE prontuario = $prontuario";
+$sql= "UPDATE Usuario SET nome = '$nome', biografia = '$biografia' WHERE prontuario = '$prontuario'";
 $result= mysqli_query($conexao, $sql);
 
 if($result) {

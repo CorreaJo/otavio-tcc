@@ -13,7 +13,7 @@ $sql= "INSERT INTO Usuario (prontuario, nome, email, senha, biografia, restricoe
 $result= mysqli_query($conexao, $sql);
 
 if($result) {
-    header('Location: index.html');
+    header('Location: ../index.html');
 } else {
     echo "Não foi possível realizar o cadastro ";
     echo "<a href='../index.php'>Voltar a página inicial</a>";
