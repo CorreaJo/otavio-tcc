@@ -12,5 +12,5 @@ $registro = mysqli_fetch_assoc($result);
 if($registro==null){
   echo "Prontuário ou senha inválida";
 } else{
-  header('Location: paginaprincipal.html');
+  header('Location: ../paginaprincipal.html');
 }
