@@ -19,6 +19,7 @@ CREATE TABLE Alimento (
     descricao TEXT
 );
 
+
 CREATE TABLE Cardapio (
     id INT AUTO_INCREMENT PRIMARY KEY,
     alimento_id INT,
