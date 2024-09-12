@@ -1,76 +1,58 @@
+
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Cardápio - Home</title>
     <link rel="stylesheet" href="css/paginaprincipal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 <header>
-    <div class="menu">
-        <img src="image/menu.png" alt="Menu">
-    </div>
-    <div>
-        <h1><?=$_SESSION["nome"]?></h1>
-    </div>
+    <div class="botao"><span id="botao-menu" class="material-symbols-outlined" onclick="clickMenu()">menu</span></div>
     <div class="logo">
-        <a class="link" href="paginaprincipal.html"><img src="image/logo.jpeg" alt="Logo IFSP"></a>
+        <img src="image/logoif.png  " alt="Logo IFSP">
     </div>
     <div class="usuario">
         <a class="link" href="paginaperfil.html"><img src="image/perfil.png" alt="Usuário"></a>
     </div>
 </header>
+<div class="row-header"></div>
+<!--- MENU LATERAL --->
+<nav id="menu" class="nav-list">
+    <ol >
+        <li><a href="indicadores.html">Indicadores</a></li>
+        <li><a href="perfis.html">Perfis</a></li>
+        <li><a href="denuncie.html">Denuncie </a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+    </ol>
+</nav>
+<!--- CONTEUDO NO GERAL --->
 <main>
-    <h1>Cardápio hoje</h1>
-    <nav class="cardapio">
-        <h2>Strogonoff</h2>
-        <div class="cardapio-father">
-            <img src="image/strogonoff.png" alt="strogonoff">
-            <div>
-                <ul>
-                    <li>Arroz</li>
-                    <li>Batata Palha</li>
-                    <li>Frango</li>
-                    <li>Ketchup</li>
-                    <li>Mostarda</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <nav class="alergicos">
-        <h2>Strogonoff</h2>
-        <div class="cardapio-father">
-            <img src="image/strogonoff.png" alt="strogonoff">
-            <div>
-                <ul>
-                    <li>Arroz</li>
-                    <li>Batata Palha</li>
-                    <li>Frango</li>
-                    <li>Ketchup</li>
-                    <li>Mostarda</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
 </main>
+<!--- RODAPÉ --->
 <footer>
-    <?php
-        if($_SESSION["prontuario"] == "777"){
-            ?>
-                <a class="link" href="paginagerenciamento.html">Gerenciamento</a>
-            <?php
-        } else {
-            ?>
-                <a class="link" href="#">Rodape</a>
-            <?php
-        }
-    ?>
+    <div class="footer-father">
+        <div>
+            <p>IFCardapio <br> @copyright ©</p>
+        </div>
+        <a class="link" href="paginagerenciamento.html">Gerenciamento</a>
+    </div>
     
 </footer>
+<script>
+            function clickMenu () {
+                if (menu.style.display == 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            }
+</script>
 </body>
 </html>

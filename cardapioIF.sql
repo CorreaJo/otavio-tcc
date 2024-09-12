@@ -32,6 +32,7 @@ CREATE TABLE Cardapio_Alergico (
     FOREIGN KEY (id_cardapio) REFERENCES Cardapio(id)
 );
 
+
 CREATE TABLE Cardapio (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
