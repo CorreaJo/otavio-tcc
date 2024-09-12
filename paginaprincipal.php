@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,9 @@
 <header>
     <div class="menu">
         <img src="image/menu.png" alt="Menu">
+    </div>
+    <div>
+        <h1><?=$_SESSION["nome"]?></h1>
     </div>
     <div class="logo">
         <a class="link" href="paginaprincipal.html"><img src="image/logo.jpeg" alt="Logo IFSP"></a>
@@ -52,7 +59,18 @@
     </nav>
 </main>
 <footer>
-    <a class="link" href="paginagerenciamento.html">Gerenciamento</a>
+    <?php
+        if($_SESSION["prontuario"] == "777"){
+            ?>
+                <a class="link" href="paginagerenciamento.html">Gerenciamento</a>
+            <?php
+        } else {
+            ?>
+                <a class="link" href="#">Rodape</a>
+            <?php
+        }
+    ?>
+    
 </footer>
 </body>
 </html>
