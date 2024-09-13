@@ -55,8 +55,9 @@ header{
 .nav-list {
     background-color: #4e7a4c;
     width: 170px;
-    height: 100vh;
-    
+    padding: 50px 0px;
+    border-radius: 0px 0px 40px 0px;
+    box-shadow: 5px 5px 6px #0b310a51;
 }
 
 .nav-list ol {
@@ -64,8 +65,8 @@ header{
     flex-direction: column;
     gap: 40px;
     align-items: center;
-    margin-top: 30px;
 }
+
 
 
 

@@ -35,7 +35,7 @@ CREATE TABLE Cardapio_Alergico (
 
 CREATE TABLE Cardapio (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Alergicos (
