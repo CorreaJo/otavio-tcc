@@ -1,104 +1,105 @@
-body{
-    font-family: sans-serif;
-}
-header{
-    background-image: linear-gradient(to bottom, #3bee27,#06b500,#11660e);
-    height: 100px;
-    width: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo img{
-    width: 100px;
-}
-footer{
-    background-image: linear-gradient(to bottom,#3bee27,#06b500,#11660e);
-    height: 100px;
-    width: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-a:link{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
     text-decoration: none;
-    color: rgb(255, 255, 255);
 }
- a:visited{
-    color: white;
-}
-main{
+
+/* CABEÇALHO */
+
+header{
+    background-color: #197016;
+    padding: 5px;
     display: flex;
-    justify-content: center;
-}
-.container {
-    background-image: linear-gradient(to bottom, #ebebeb,#c9c9c9,#707070);
-    max-width: 500px;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    align-items: flex-end;
-    display: flex;
-    justify-content: center;
-}
-.profile-pic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-}
-.profile-form {
-    display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    transform: translate(50%,0%);
-}
-.profile-pic {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
-.profile-pic img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}  
-.profile-pic button {
-    background-image: linear-gradient(to bottom,#3bee27,#06b500,#11660e);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-} 
-.form-inputs {
-    display: flex;
-    flex-direction: column;
+
+.logo img{
     width: 300px;
-    align-items: center;
-} 
-.form-inputs h2 {
-    margin-bottom: 10px;
-} 
-.form-inputs input {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-} 
-.form-inputs button {
-    background-image: linear-gradient(to bottom,#3bee27,#06b500,#11660e);
+}
+
+.row-header {
+    height: 5px;
+    background-color: #0b310a;
+}
+
+
+/* Menu = menu lateral */
+#menu {
+    display: none;
+    color: black;
+    position: absolute;
+}
+
+#menu a {
     color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+}
+
+.botao {
+    color: white;
+    display: block;
+    width: 100px;
     cursor: pointer;
 }
+
+#botao-menu {
+    font-size: 50px;
+}
+
+.nav-list {
+    background-color: #4e7a4c;
+    width: 170px;
+    padding: 50px 0px;
+    border-radius: 0px 0px 40px 0px;
+    box-shadow: 5px 5px 6px #0b310a51;
+}
+
+.nav-list ol {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* RODAPÉ */
+footer{
+    background-color: #197016;
+}
+
+.footer-father {
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 200px;
+    padding: 20px;
+    align-items: center;
+}
+
+.footer-father a {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.footer-father p {
+    text-align: center;
+}
+
+
+

@@ -1,6 +1,11 @@
 <?php
 session_start();
+
+require "php/conexao.php";
+$prontuario = $_SESSION['prontuario'];
+$select = "SELECT * FROM usuario WHERE email = '$prontuario'";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +29,13 @@ session_start();
 <!--- MENU LATERAL --->
 <nav id="menu" class="nav-list">
     <ol >
-        <li><a href="indicadores.html">Indicadores</a></li>
-        <li><a href="perfis.html">Perfis</a></li>
-        <li><a href="denuncie.html">Denuncie </a></li>
-        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="indicadores.html">Sobre o PNAP</a></li>
+        <li><a href="perfis.html">Sobre o Projeto</a></li>
+        <li><a href="denuncie.html">Sobre nós</a></li>
+        <?php
+    if($_SESSION["prontuario"] == '111') {
+        ?><li><a class="link" href="paginagerenciamento.html">Gerenciamento</a></li><?php
+    } ?>
     </ol>
 </nav>
 <!--- CONTEUDO NO GERAL --->
@@ -40,7 +48,7 @@ session_start();
         <div>
             <p>IFCardapio <br> @copyright ©</p>
         </div>
-        <a class="link" href="paginagerenciamento.html">Gerenciamento</a>
+        
     </div>
     
 </footer>

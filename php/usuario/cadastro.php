@@ -5,8 +5,9 @@ require "../conexao.php";
 $prontuario= $_POST['prontuario'];
 $nome= $_POST['nome'];
 $senha= $_POST['senha'];
+$email= $_POST['email'];
 
-$sql= "INSERT INTO Usuario (prontuario, nome, senha) VALUE ('$prontuario','$nome', '$senha')";
+$sql= "INSERT INTO Usuario (prontuario, nome, senha, email) VALUE ('$prontuario','$nome', '$senha', '$email')";
 $result= mysqli_query($conexao, $sql);
 
 if($result) {
