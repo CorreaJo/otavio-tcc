@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,15 +23,14 @@
     </header>
     <main>
         <div class="container">
-            <div class="profile-pic">
-                <img src="https://voxnews.com.br/wp-content/uploads/2017/04/unnamed.png" alt="Foto de perfil">
-                <button>Mudar foto</button>
-            </div>
             <div class="form-inputs">
                 <h2>Perfil</h2>
-                <input type="text" placeholder="Nome:">
-                <input type="text" placeholder="Bio:">
-                <button>Salvar</button>
+                <form action="php/usuario/editar.php" method="post">
+                    <input type="text" name="prontuario" value=<?=$_SESSION["prontuario"]?> hidden>
+                    <input type="name" name="nome" placeholder=<?=$_SESSION["nome"]?>>
+                    <input type="password" name="senha"  placeholder=<?=$_SESSION["senha"]?>>
+                    <button>Salvar</button>
+                </form>     
             </div>
         </div>
     </main>

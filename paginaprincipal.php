@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -18,7 +17,7 @@ session_start();
         <img src="image/logoif.png  " alt="Logo IFSP">
     </div>
     <div class="usuario">
-        <a class="link" href="paginaperfil.html"><img src="image/perfil.png" alt="Usuário"></a>
+        <a class="link" href="paginaperfil.php"><img src="image/perfil.png" alt="Usuário"></a>
     </div>
 </header>
 <div class="row-header"></div>
