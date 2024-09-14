@@ -67,13 +67,69 @@ header{
     align-items: center;
 }
 
+/* MAIN */
+.perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e9e9e929;
+    margin: 10px 0px 30px 0px;
+}
 
+.title-1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
 
+.t-info{
+    color: #197016;
+    font-style: italic;
+}
 
+.infos {
+    background-color: rgba(183, 183, 183, 0.289);
+    padding: 30px 60px;
+    font-size: 18px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 20px 0px 20px 0px;
+}
 
+.info-h4 {
+    margin-bottom: 30px;
+}
 
+.botao-deslogar {
+    background-color: rgb(181, 26, 26);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px
+}
 
+.botao-deslogar:hover {
+    background-color: rgb(202, 13, 13);
+}
 
+.input-att {
+    width: 375px;
+    height: 30px;
+}
+
+.botao-atualizar {
+    margin-top: 20px;
+    background-color: rgb(16, 114, 28);
+    color: white;
+    padding: 5px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.botao-atualizar:hover {
+    background-color: rgb(33, 155, 47);
+}
 
 
 /* RODAPÉ */
@@ -100,6 +156,3 @@ footer{
 .footer-father p {
     text-align: center;
 }
-
-
-

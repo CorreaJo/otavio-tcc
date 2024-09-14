@@ -10,7 +10,7 @@ $sql= "UPDATE usuario SET nome = '$nome', senha = '$senha' WHERE prontuario = '$
 $result= mysqli_query($conexao, $sql);
 
 if($result) {
-    header('Location: ../../paginaperfil.php');
+    header('Location: ../../index.html');
 } else {
     echo "Não foi possível realizar a edição ";
     echo "<a href='../index.php'>Voltar a página inicial</a>";

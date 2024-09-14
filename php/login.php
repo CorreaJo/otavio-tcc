@@ -20,6 +20,7 @@ if(isset($_POST['login']) && !empty($_POST['prontuario']) && !empty($_POST['senh
     } else {
         $_SESSION["prontuario"] = $prontuario;
         $_SESSION["senha"] = $senha;
+        $_SESSION["email"] = $linha["email"];
         $_SESSION["nome"] = $linha["nome"];
         header("location: ../paginaprincipal.php");
     }

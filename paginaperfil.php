@@ -2,10 +2,14 @@
 session_start();
 
 require "php/conexao.php";
-$prontuario = $_SESSION['prontuario'];
-$select = "SELECT * FROM usuario WHERE email = '$prontuario'";
-?>
 
+$nome = $_SESSION['nome'];
+$email = $_SESSION['email'];
+$senha = $_SESSION['senha'];
+$prontuario = $_SESSION['prontuario'];
+
+$select = "SELECT * FROM usuario WHERE prontuario = '$prontuario'";
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -39,30 +43,43 @@ $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
     } ?>
     </ol>
 </nav>
-    <main>
-        
-        <div class="container">
-            <div class="profile-pic">
-                <img src="https://voxnews.com.br/wp-content/uploads/2017/04/unnamed.png" alt="Foto de perfil">
-                <button>Mudar foto</button>
+<main>
+        <h1 class="title-1">Olá, <strong class="t-info"><?php echo $nome ?></strong>.</h1>
+    <div class="perfil">
+        <div class="infos">
+            <div class="info-h4"><h2>Suas informações</h2>
+                <h4>Nome: <strong class="t-info"><?php echo $nome ?></strong></h4>
+                <h4>Prontuario: <strong class="t-info"><?php echo $prontuario ?></strong></h4>
+                <h4>Email: <strong class="t-info"><?php echo $email ?></strong></h4>
             </div>
-            <div class="form-inputs">
-                <h2>Perfil</h2>
-                <input type="text" placeholder="Nome:">
-                <input type="text" placeholder="Bio:">
-                <button>Salvar</button>
+            <a class="botao-deslogar" href="php/sair.php">DESLOGAR</a>
+        </div>
+        <div class="infos i-edit">
+            <div class="editar-usuario"><h2>Editar informações</h2>
+            <form action="php/usuario/editar.php" method="POST" >
+                <input class="prontuario" type="hidden" name="prontuario" value="<?php echo $prontuario ?>" id="prontuario">
+                <br>
+                <label for="nome">Nome:</label><br>
+                <input class="input-att" type="text" id="nome" value="<?php echo $nome ?>" name="nome">
+                <br>
+                <label for="email">Email:</label><br>
+                <input class="input-att" type="email" name="email" value="<?php echo $email ?>" id="email">
+                <br>
+                <label for="senha">Senha:</label><br>
+                <input class="input-att" type="password" id="senha" value="<?php echo $senha?>" name="senha">
+                <br>
+                <button class="botao-atualizar" name="editar" type="submit" value="editar">EDITAR</button>
             </div>
         </div>
-    </main>
+    </div>
+</main>
     <!--- RODAPÉ --->
 <footer>
     <div class="footer-father">
         <div>
             <p>IFCardapio <br> @copyright ©</p>
-        </div>
-        
-    </div>
-    
+        </div>  
+    </div>    
 </footer>
 <script>
             function clickMenu () {
