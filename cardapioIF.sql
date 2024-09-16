@@ -16,23 +16,6 @@ CREATE TABLE Alimento (
     tipo VARCHAR(50)
 );
 
-CREATE TABLE Cardapio_Alimento (
-    id_alimento INT,
-    id_cardapio INT,
-    PRIMARY KEY (id_alimento, id_cardapio),
-    FOREIGN KEY (id_alimento) REFERENCES Alimento(id),
-    FOREIGN KEY (id_cardapio) REFERENCES Cardapio(id)
-);
-
-CREATE TABLE Cardapio_Alergico (
-    id_alergico INT,
-    id_cardapio INT,
-    PRIMARY KEY (id_alergico, id_cardapio),
-    FOREIGN KEY (id_alergico) REFERENCES Alergicos(id),
-    FOREIGN KEY (id_cardapio) REFERENCES Cardapio(id)
-);
-
-
 CREATE TABLE Cardapio (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
@@ -41,4 +24,22 @@ CREATE TABLE Cardapio (
 CREATE TABLE Alergicos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Cardapio_Alimento (
+    id_alimento INT,
+    id_cardapio INT,
+    PRIMARY KEY (id_alimento, id_cardapio),
+    FOREIGN KEY (id_alimento) REFERENCES Alimento(id),
+    FOREIGN KEY (id_cardapio) REFERENCES Cardapio(id)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Cardapio_Alergico (
+    id_alergico INT,
+    id_cardapio INT,
+    PRIMARY KEY (id_alergico, id_cardapio),
+    FOREIGN KEY (id_alergico) REFERENCES Alergicos(id),
+    FOREIGN KEY (id_cardapio) REFERENCES Cardapio(id)
+    ON DELETE CASCADE
 );
