@@ -34,7 +34,7 @@ $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
         <li><a href="denuncie.html">Sobre nós</a></li>
         <?php
     if($_SESSION["prontuario"] == '111') {
-        ?><li><a class="link" href="paginagerenciamento.html">Gerenciamento</a></li><?php
+        ?><li><a class="link" href="paginagerenciamento.php">Gerenciamento</a></li><?php
     } ?>
     </ol>
 </nav>
@@ -50,7 +50,6 @@ $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
         </div>
         
     </div>
-    
 </footer>
 <script>
             function clickMenu () {
