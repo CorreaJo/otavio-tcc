@@ -1,8 +1,8 @@
 <?php
 
-require "conexao.php";
+require "../conexao.php";
 
-$id = $_POST["id"];
+$id = $_GET["id"];
 
 $sql= "DELETE FROM alergicos WHERE id='$id'";
 $result= mysqli_query($conexao, $sql);
@@ -12,7 +12,7 @@ $result= mysqli_query($conexao, $sql);
 
 
 if($result) {
-    header('Location: ../index.html');
+    header('Location: ../../todosAlergicos.php');
 } else {
     echo "Não foi possível realizar a edição";
     echo "<a href='../index.php'>Voltar a página inicial</a>";
