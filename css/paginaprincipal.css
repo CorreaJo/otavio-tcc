@@ -67,19 +67,49 @@ header{
     align-items: center;
 }
 
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
 
+h2 {
+    text-align: center;
+    color: #0b310a;
+}
 
+#h1-cardapio {
+    margin-top: 140px;
+}
 
+.cardapio {
+    display: flex;
+    justify-content: center;
+}
 
+.cardapio-item {
+    width: 300px;
+    background-color: rgba(207, 207, 207, 0.426);
+    padding: 20px;
+    border-radius: 10px 0px 10px 0px;
+}
 
+.alergico {
+    display: flex;
+    justify-content: center;
+}
 
-
-
-
+.alergico-item {
+    background-color: rgba(207, 207, 207, 0.426);
+    padding: 20px 60px;
+    border-radius: 10px 0px 10px 0px;
+}
 
 /* RODAPÉ */
 footer{
     background-color: #197016;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 
 .footer-father {

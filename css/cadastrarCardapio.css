@@ -34,7 +34,7 @@ header{
 #menu {
     display: none;
     color: black;
-    position: fixed;
+    position: absolute;
 }
 
 #menu a {
@@ -67,58 +67,75 @@ header{
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-    margin: 140px 0px 10px 0px;
-}   
-
-.container {
-    background-color: rgba(208, 202, 202, 0.153);
+.cadastro-father {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-h2 {
+.botao-add {
+    background-color: #197016;
+    border: none;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.botao-add:hover {
+    background-color: #0d350c;
+}
+
+.input-add {
+    padding: 4px 15px;
+    position: relative;
+    top: -1px;
+}
+
+#linha {
+    background-color: #0b310a;
+    height: 2px;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+h1 {
     text-align: center;
+    margin-top: 20px;
 }
 
-.botao-cardapio {
-    background-color: #0b310a;
-    color: white;
-    padding: 5px;
-    display: block;
-    border-radius: 5px;
+.form-cadastro {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-.botao-cardapio2 {
-    background-color: #0b310a;
-    color: white;
-    padding: 5px;
-    display: block;
-    border-radius: 5px;
+select {
+    margin: 10px 0px;
+}
+
+label {
     margin-top: 10px;
-    text-align: center;
+    color: black;
 }
 
-.botao-cardapio2:hover {
-    background-color: #197016;
-}
-
-
-.botao-cardapio:hover {
-    background-color: #197016;
+#botao-cadastrar {
+    background-color: #0b310a;
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 5px 30px;
 }
 
 /* RODAPÉ */
 footer{
     background-color: #197016;
     position: fixed;
-  bottom: 0;
-  width: 100%;
+    bottom: 0px;
+    width: 100%;
 }
 
 .footer-father {

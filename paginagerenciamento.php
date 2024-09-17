@@ -44,7 +44,8 @@ $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
     <div class="container">
         <div class="item cardapio">
             <h2>Cardápio</h2>
-            <a class="botao-cardapio" href="">Visualizar Cardápios</a>
+                <a class="botao-cardapio" href="adicionarCardapio.php">Adicionar Cardápios</a>
+                <a class="botao-cardapio2" href="todosCardapios.php">Ver cardapio</a>
         </div>
         <div class="item alergico">
             <h2>Alérgenos</h2>

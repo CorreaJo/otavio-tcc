@@ -4,6 +4,19 @@ session_start();
 require "php/conexao.php";
 $prontuario = $_SESSION['prontuario'];
 $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
+
+$selectC = "SELECT * from cardapio";
+$result2 = mysqli_query($conexao, $selectC);
+
+$linha = mysqli_fetch_assoc($result2);
+$id = $linha["id"];
+
+$selectA = "SELECT * from Cardapio_Alimento WHERE id_cardapio=$id";
+$resultAlimento = mysqli_query($conexao, $selectA);
+
+$selectAlergico = "SELECT * from Cardapio_Alergico WHERE id_cardapio=$id";
+$resultAlergico = mysqli_query($conexao, $selectAlergico);
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +53,50 @@ $select = "SELECT * FROM usuario WHERE email = '$prontuario'";
 </nav>
 <!--- CONTEUDO NO GERAL --->
 <main>
-    
+<h1 id="h1-cardapio">CARDAPIO</h1>
+<div class="cardapio">
+    <div class="cardapio-item">
+<?php
+            while($linha = mysqli_fetch_assoc($resultAlimento)){
+                $id_alimento = $linha["id_alimento"];
+        
+                $select = "SELECT * from alimento WHERE id = $id_alimento";
+                $resultAli = mysqli_query($conexao, $select);
+                
+                while($linha= mysqli_fetch_assoc($resultAli)){
+                    ?>
+                        <h2><?=$linha["nome"]?></h2>
+                    <?php
+                }
+                
+            }
+            
+
+            ?>
+    </div>
+</div>
+<h1>ALERGICOS</h1>
+<div class="alergico">
+    <div class="alergico-item">
+            <?php
+        
+            while($linha = mysqli_fetch_assoc($resultAlergico)){
+                $id_alergico = $linha["id_alergico"];
+                
+                $selectAler = "SELECT * from alergicos WHERE id = $id_alergico";
+                $resultAler = mysqli_query($conexao, $selectAler);
+
+                while($linha = mysqli_fetch_assoc($resultAler)){
+                    ?>
+                        <h2><?=$linha["nome"]?></h2>
+                    <?php
+                }
+                
+            }
+
+
+        ?>
+
 </main>
 <!--- RODAPÉ --->
 <footer>
